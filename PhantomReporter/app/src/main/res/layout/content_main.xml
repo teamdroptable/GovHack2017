@@ -9,6 +9,17 @@
     tools:showIn="@layout/activity_main"
     tools:context="com.teamdroptable.phantomreporter.MainActivity">
 
+    <FrameLayout
+        android:id="@+id/lytGMap"
+        android:layout_width="224dp"
+        android:layout_height="202dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="33dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+    </FrameLayout>
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="288dp"
@@ -20,7 +31,8 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        tools:layout_editor_absoluteX="52dp" />
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <Button
         android:id="@+id/button2"
@@ -34,7 +46,9 @@
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/bttnPolice"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <Button
         android:id="@+id/bttnPolice"
@@ -43,6 +57,7 @@
         android:layout_marginRight="51dp"
         android:text="Call Police"
         app:layout_constraintBaseline_toBaselineOf="@+id/button2"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="51dp" />
 
 </android.support.constraint.ConstraintLayout>

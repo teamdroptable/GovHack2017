@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        Button policeButton = (Button) findViewById(R.id.bttnPolice);
+        final Button policeButton = (Button) findViewById(R.id.bttnPolice);
 
         policeButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,13 +32,15 @@ public class MainActivity extends AppCompatActivity {
                 Intent callIntent = new Intent(Intent.ACTION_CALL);
                 callIntent.setData(Uri.parse("tel:0424185593"));
 
-                /*
+
 
                 if (ActivityCompat.checkSelfPermission(MainActivity.this,
                         Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    policeButton.setBackgroundColor(000000);
                     return;
                 }
-                */
+
+
                 startActivity(callIntent);
             }
         });
@@ -77,5 +79,6 @@ public class MainActivity extends AppCompatActivity {
 }
 
 
-//0424185593
+
+
 
