@@ -15,6 +15,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
+import java.util.Vector;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -37,6 +39,17 @@ public class MainActivity extends AppCompatActivity {
                 if (ActivityCompat.checkSelfPermission(MainActivity.this,
                         Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                     policeButton.setBackgroundColor(000000);
+
+
+
+
+
+//                    Vector<String> tags = new Vector<String>();
+//                    tags.add("piracy");
+//                    tags.add("loitering");
+//                    ServiceCaller.ReportCrime("Aranda", -35.257911, 149.081283, "Those pseky kids", tags);
+                    RecentCrimeStatistics historicalCrime = ServiceCaller.GetCrimeStatistics("Aranda");
+                    String test = "";
                     return;
                 }
 
