@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="PhantomReporterDB">
+  <DataContextMoniker Name="/PhantomReporterDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="053266b2-12b3-449b-85db-e627412fabdb" absoluteBounds="0.5, 0.5, 3.5, 4.0785139973958326">
+      <DataClassMoniker Name="/PhantomReporterDBDataContext/CrimeHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="173480b8-2530-47dd-9b05-43a582391d50" absoluteBounds="0.5149999999999999, 0.96, 3.4699999999999998, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="149f9a62-3df5-4bcc-9d98-4116366523ac" absoluteBounds="4.625, 1.125, 2, 1.9631982421875">
+      <DataClassMoniker Name="/PhantomReporterDBDataContext/CrimeComment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0accbb41-e8f5-415a-ad16-be245165ae60" absoluteBounds="4.64, 1.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4c1da940-bf63-4bab-863a-7555aa77d84e" absoluteBounds="7.375, 1.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/PhantomReporterDBDataContext/CrimeTag" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7676abfb-ecc2-4603-b4e8-7356d384778b" absoluteBounds="7.3900000000000006, 2.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.625 : 2.41909912109375); (7.375 : 2.41909912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PhantomReporterDBDataContext/CrimeComment/CrimeComment_CrimeTag" />
+      <nodes>
+        <classShapeMoniker Id="149f9a62-3df5-4bcc-9d98-4116366523ac" />
+        <classShapeMoniker Id="4c1da940-bf63-4bab-863a-7555aa77d84e" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

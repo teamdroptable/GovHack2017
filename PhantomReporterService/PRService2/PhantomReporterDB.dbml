@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PhantomReporterDB" Class="PhantomReporterDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=phantomreporterserver.database.windows.net;Initial Catalog=PhantomReporterDB;Persist Security Info=True;User ID=TeamDropTable" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="PhantomReporterDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CrimeHistory" Member="CrimeHistory">
+    <Type Name="CrimeHistory">
+      <Column Name="Suburb" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Homicide" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Assault" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Sexual assault]" Member="Sexual_assault" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Offences against a person]" Member="Offences_against_a_person" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Burglary" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Robbery" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Motor vehicle theft]" Member="Motor_vehicle_theft" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Property damage]" Member="Property_damage" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Other offences]" Member="Other_offences" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Traffic Infringement Notices]" Member="Traffic_Infringement_Notices" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Theft (excluding Motor Vehicles)]" Member="Theft__excluding_Motor_Vehicles_" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Road fatality]" Member="Road_fatality" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Road collision with injury]" Member="Road_collision_with_injury" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Quarter" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Region" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CrimeComment" Member="CrimeComment">
+    <Type Name="CrimeComment">
+      <Column Name="Latitude" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Longitude" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Suburb" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Comment" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="InputDateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="HashID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="CrimeComment_CrimeTag" Member="CrimeTag" ThisKey="HashID" OtherKey="HashID" Type="CrimeTag" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CrimeTag" Member="CrimeTag">
+    <Type Name="CrimeTag">
+      <Column Name="HashTag" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="HashID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HashTagID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="CrimeComment_CrimeTag" Member="CrimeComment" ThisKey="HashID" OtherKey="HashID" Type="CrimeComment" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
