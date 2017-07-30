@@ -2,4 +2,16 @@
     <string name="app_name">PhantomReporter</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_maps">Map</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tweet1">aggressivebehaviour</string>
+    <string name="tweet2">alcohol</string>
+    <string name="tweet3">fights</string>
+    <string name="tweet4">noise</string>
+    <string name="tweet5">underagedrinking</string>
+    <string name="tweet6">vandalism</string>
+    <string name="tweet7">antisocialbehaviour</string>
+    <string name="tweet8">substanceabuse</string>
+
 </resources>
