@@ -10,6 +10,8 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.support.v4.app.ActivityCompat;
+import android.text.Layout;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,43 +24,25 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d("HOOPGOD","HATSS");
+
 
         setContentView(R.layout.activity_main);
 
 
+
+
         final Button policeButton = (Button) findViewById(R.id.bttnPolice);
+        final MainActivity currentObject = this;
 
         policeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                Intent callIntent = new Intent(Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel:0424185593"));
 
+                Intent intent = new Intent (currentObject, CallActivity.class);
+                startActivity(intent);
 
-
-                if (ActivityCompat.checkSelfPermission(MainActivity.this,
-                        Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                    policeButton.setBackgroundColor(000000);
-
-
-
-
-
-//                    Vector<String> tags = new Vector<String>();
-//                    tags.add("piracy");
-//                    tags.add("loitering");
-//                    ServiceCaller.ReportCrime("Aranda", -35.257911, 149.081283, "Those pseky kids", tags);
-                    RecentCrimeStatistics historicalCrime = ServiceCaller.GetCrimeStatistics("Aranda");
-                    String test = "";
-                    return;
-                }
-
-
-                startActivity(callIntent);
             }
-        });
-
-
     }
 
     @Override
@@ -85,6 +69,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void reportClick(View view){
         Intent intent = new Intent (this, ReportActivity.class);
+        startActivity(intent);
+    }
+
+
+    public void graphClick(View view){
+        Intent intent = new Intent (this, GraphActivity.class);
         startActivity(intent);
     }
 

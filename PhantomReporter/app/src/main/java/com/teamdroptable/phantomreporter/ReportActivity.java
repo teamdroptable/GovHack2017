@@ -1,5 +1,6 @@
 package com.teamdroptable.phantomreporter;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,16 +15,28 @@ public class ReportActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_report);
 
-        final Animation animPop = AnimationUtils.loadAnimation(this,R.anim.anim_fade);
 
-        Button submitButton = (Button) findViewById(R.id.angry_btn);
+        final Animation animAlpha = AnimationUtils.loadAnimation(this, R.anim.anim_alpha);
+        final Button btnAlpha = (Button)findViewById(R.id.angry_btn);
 
-        submitButton.setOnClickListener(new View.OnClickListener() {
+        final ReportActivity currentObject = this;
+        btnAlpha.setOnClickListener(new Button.OnClickListener(){
+
+
             @Override
-            public void onClick(View v) {
-                v.startAnimation(animPop);
-            }
-        });
+            public void onClick(View arg0) {
+                arg0.startAnimation(animAlpha);
+                btnAlpha.setText("Processing...");
+
+
+                Intent intent = new Intent (currentObject, ThankyouActivity.class);
+
+                //do bundle stuff
+                startActivity(intent);
+            }});
+
     }
+
+
 }
 

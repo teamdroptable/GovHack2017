@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:textColorLink="@color/deepBlue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tweet1" />
+
+    <CheckBox
+        android:id="@+id/checkBox8"
+        android:textColorLink="@color/deepBlue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tweet2" />
+
+    <CheckBox
+        android:id="@+id/checkBox7"
+        android:textColorLink="@color/deepBlue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tweet3" />
+
+    <CheckBox
+        android:id="@+id/checkBox6"
+        android:textColorLink="@color/deepBlue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tweet4" />
+
+    <CheckBox
+        android:id="@+id/checkBox5"
+        android:textColorLink="@color/deepBlue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tweet5" />
+
+    <CheckBox
+        android:id="@+id/checkBox4"
+        android:textColorLink="@color/deepBlue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tweet6" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:textColorLink="@color/deepBlue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tweet7" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:textColorLink="@color/deepBlue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tweet8" />>
+</LinearLayout>
