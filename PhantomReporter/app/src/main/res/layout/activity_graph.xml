@@ -6,4 +6,12 @@
     android:layout_height="match_parent"
     tools:context="com.teamdroptable.phantomreporter.GraphActivity">
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="388dp"
+        android:layout_height="392dp"
+        app:srcCompat="@mipmap/example_graph_of_city"
+        tools:layout_editor_absoluteY="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="8dp" />
 </android.support.constraint.ConstraintLayout>
