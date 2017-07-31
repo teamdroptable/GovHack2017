@@ -1,4 +1,6 @@
-# GovHack2017
+# GovHack2017 Phantom Watcher
+
+NOTE:3 Commits were made post the due date none of which were a change to our project.  The first was to add this README, the second was to delete a superfluous textfile that was unrelated to the project and the third commit was to add the addtion of this Note.
 
 This Android application was made in Android Studio, to run the program, download a copy of Android Studio and clone this repo onto your computer.  Aside from the normal Android studio functions you will need to download the 'Google Play' services in the SDK manager of Android Studio if opening the project does not automatically do so.
 
@@ -12,3 +14,5 @@ The application is clearly not fully functional for distribution, the current ve
 2.  Communication with the Server.  The ServiceCaller.class is an operational class to talk the free server that was setup for Govhack and the server does contain a functioning database for the application.  However Service caller is not implemented and needs to be impelmented in the ReportActivity.class and the GraphActivity.class to send and obtain information from the server.
 
 The developers would also like it known that we are aware of how...haphhazard our code is with indecision between using Java constructor's for elements and Android XML resources for elements, as well as indecisive design in techniques.  All that said for a rushed project we're happy with a vaguely working result and we have identified most of the cleanups and implementation changes we would do.
+
+
